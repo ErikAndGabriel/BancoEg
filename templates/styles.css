@@ -1,25 +1,154 @@
+/* Reset e Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-image: url('https://cdn.discordapp.com/attachments/1367717695562186762/1403849333480226956/Copia_de_Inicio.jpg.jpg?ex=68990c13&is=6897ba93&hm=6bc7344207782837889c2ae9772d7888d58f18edda2171204dd97d829095741e&');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-}
-.inicial h1 {
-  padding-left: 50px;
-  font-size: 60px;
+  background-attachment: fixed;
   color: white;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.inicial p {
-  padding-left: 50px;
+/* Container Principal */
+body.inicial {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Header */
+header {
+  padding: 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+header ul a {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+header ul a:hover {
+  opacity: 0.8;
+}
+
+header ul a:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo Principal */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 3rem;
+}
+
+main p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+/* Botões */
+button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
 }
 
 .botao-começar {
-  padding-left: 50px;
+  display: inline-block;
 }
 
-.link {
-  padding-left: 90px;
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  main {
+    padding: 0 1.5rem;
+  }
+  
+  main p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header ul {
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
