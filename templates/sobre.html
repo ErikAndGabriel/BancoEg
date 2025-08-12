@@ -6,6 +6,104 @@
     <meta name="author" content="erik">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Estilos específicos para a página Quem Somos */
+        .quem-somos .equipe {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .membro-equipe {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .foto-membro {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-membro {
+            flex: 1;
+        }
+        
+        .nome-membro {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .cargo-membro {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .bio-membro {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .sobre-empresa {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .subtitulo {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .texto-sobre {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .membro-equipe {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .foto-membro {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .foto-membro {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .nome-membro {
+                font-size: 1.3rem;
+            }
+            
+            .cargo-membro {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body class="quem-somos">
     <header class="cabecalho">
@@ -24,7 +122,7 @@
     <main class="conteudo-principal">
         <section class="equipe">
             <div class="membro-equipe">
-                <img src="foto-erik.jpg" alt="Erik - Desenvolvedor" class="foto-membro">
+                <img src="https://cdn.discordapp.com/avatars/1367627163561623632/78ea58083bf63a95a0da760ecb343037.png?size=256" alt="Erik - Desenvolvedor" class="foto-membro">
                 <div class="info-membro">
                     <h2 class="nome-membro">Erik</h2>
                     <p class="cargo-membro">Desenvolvedor Full-Stack</p>
@@ -33,7 +131,7 @@
             </div>
 
             <div class="membro-equipe">
-                <img src="foto-gabriel.jpg" alt="Gabriel - Gerente de Projetos" class="foto-membro">
+                <img src="https://cdn.discordapp.com/avatars/780927880178827324/d6859e98cf216100effd8a0d7e1c47bb.png?size=256" alt="Gabriel - Gerente de Projetos" class="foto-membro">
                 <div class="info-membro">
                     <h2 class="nome-membro">Gabriel</h2>
                     <p class="cargo-membro">Gerente de Projetos</p>
